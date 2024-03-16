@@ -1,0 +1,141 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  padding: 24px 0;
+  width: 100%;
+  background-color: transparent;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    gap: 97px;
+  }
+
+  &__logo {
+    width: 72px;
+    height: 72px;
+
+    &-wrapper {
+      display: flex;
+      gap: 14px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__title,
+  &__descr {
+    display: block;
+    max-width: 200px;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 34px;
+    background-image: url('../img/icons/Location.svg');
+    background-position: left center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+
+    &-title {
+      font-weight: 700;
+    }
+
+    &-descr,
+    &-title {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--color-mirage);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--color-mirage);
+
+    &-button {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--yellow-orange);
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+
+  &__link {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+
+    &--whatsapp,
+    &--telegram,
+    &--instagram,
+    &--youtube {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &--whatsapp {
+      background-image: url('../img/icons/WhatsApp.svg');
+
+    }
+
+    &--telegram {
+      background-image: url('../img/icons/telegram.svg');
+    }
+
+    &--instagram {
+      background-image: url('../img/icons/instagram.svg');
+    }
+
+    &--youtube {
+      background-image: url('../img/icons/youtube.svg');
+    }
+  }
+}
