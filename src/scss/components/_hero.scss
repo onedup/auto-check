@@ -3,7 +3,7 @@
   z-index: 1;
   padding-top: 280px;
   width: 100%;
-  background-image: url('../img/hero-bg.webp');
+  background-image: url('../img/bg/hero-bg.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url('../img/car-bg.webp');
+    background-image: url('../img/bg/car-bg.webp');
     background-position: right top;
     background-repeat: no-repeat;
   }
@@ -75,7 +75,7 @@
     &__img {
       margin-bottom: 10px;
     }
-    
+
     &__title {
       margin-bottom: 10px;
       display: block;

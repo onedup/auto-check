@@ -1,0 +1,67 @@
+.instruction {
+  padding-top: 80px;
+  padding-bottom: 65px;
+  background-image: url('../img/bg/instruction-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__descr {
+    margin: 0 auto;
+    margin-bottom: 46px;
+    text-align: center;
+    max-width: 1100px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &-block {
+    padding-left: 30px;
+
+    &__title {
+      position: relative;
+      margin-bottom: 5px;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icons/instruction-check.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+  }
+}
