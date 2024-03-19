@@ -99,12 +99,15 @@
       align-items: end;
     }
   }
+
+  &__socials {
+    justify-content: end;
+  }
 }
 
 .socials {
   display: flex;
   align-items: center;
-  justify-content: end;
   gap: 8px;
 
   &__link {
