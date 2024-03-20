@@ -2,40 +2,60 @@
   position: relative;
   z-index: 1;
   padding-top: 280px;
+  padding-bottom: 60px;
   width: 100%;
   background-image: url('../img/bg/hero-bg.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include minidesk {
+    padding-top: 140px;
+  }
 
-  ::before {
-    content: "";
+  @include mobile {
+    padding-bottom: 30px;
+  }
+
+  &__bg {
     position: absolute;
-    left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
     z-index: -1;
-    background-image: url('../img/bg/car-bg.webp');
-    background-position: right top;
-    background-repeat: no-repeat;
+    width: 50%;
+    max-width: 979px;
+
+    @include minidesk {
+      display: none;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+
+    @include minidesk {
+      align-items: center;
+    }
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: var(--main-gap);
+
+    @include minidesk {
+      text-align: center;
+    }
   }
 
   &__descr {
-    margin-bottom: 48px;
+    margin-bottom: calc(var(--main-gap) * 2);
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
+
+    @include minidesk {
+      text-align: center;
+    }
   }
 
   &__title,
@@ -50,6 +70,14 @@
     &-wrapper {
       max-width: 460px;
       margin-bottom: 246px;
+
+      @include big-desktop {
+        margin-bottom: 100px;
+      }
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
     }
 
   }
@@ -65,14 +93,21 @@
   }
 
   &__list {
-    margin-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+
+    @include minidesk {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &-item {
     &__img {
+      width: 68px;
+      height: 68px;
       margin-bottom: 10px;
     }
 
@@ -89,6 +124,15 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 26px;
+    }
+
+    @include minidesk {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      max-width: 340px;
     }
   }
 }

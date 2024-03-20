@@ -4,8 +4,13 @@
   // base
   --font-family: "Involve", sans-serif;
   --content-width: 1400px;
-  --container-offset: 250px;
+  --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --main-gap: 24px;
+
+  @include mobile {
+    --main-gap: 18px;
+  }
 
   // colors
   --color-light: #fff;

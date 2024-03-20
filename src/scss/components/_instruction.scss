@@ -7,7 +7,7 @@
   background-size: cover;
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: var(--main-gap);
     text-align: center;
   }
 

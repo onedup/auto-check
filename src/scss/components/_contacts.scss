@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: var(--main-gap);
     font-size: 40px;
     font-weight: 700;
     line-height: 53px;
@@ -29,7 +29,7 @@
   }
 
   &__descr {
-    margin-bottom: 24px;
+    margin-bottom: var(--main-gap);
     font-weight: 700;
   }
 

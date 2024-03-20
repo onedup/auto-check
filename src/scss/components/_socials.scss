@@ -1,0 +1,37 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__link {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+
+    &--whatsapp,
+    &--telegram,
+    &--instagram,
+    &--youtube {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &--whatsapp {
+      background-image: url('../img/icons/WhatsApp.svg');
+
+    }
+
+    &--telegram {
+      background-image: url('../img/icons/telegram.svg');
+    }
+
+    &--instagram {
+      background-image: url('../img/icons/instagram.svg');
+    }
+
+    &--youtube {
+      background-image: url('../img/icons/youtube.svg');
+    }
+  }
+}
