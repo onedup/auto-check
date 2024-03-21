@@ -6,7 +6,7 @@ import {Thumbs} from "../vendor/carousel.thumbs.esm.js";
 Fancybox.bind('[data-fancybox="gallery"]', {
   // Your custom options
 });
-const container = document.getElementById("myCarousel");
+const container = document.getElementById("dealCarousel");
 const options = {
   Dots: false,
   Navigation: false,

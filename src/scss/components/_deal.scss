@@ -1,10 +1,22 @@
 .deal {
   padding-top: 59px;
 
+  @include tablet {
+    padding-top: 30px;
+  }
   &__card {
     padding: 64px 100px;
     border-radius: 60px;
     box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+      padding: 32px 50px;
+    }
+
+    @include mobile {
+      padding: 32px 25px;
+      border-radius: 30px;
+    }
   }
 
   &__title {
@@ -12,19 +24,36 @@
     max-width: 1100px;
     margin: 0 auto;
     margin-bottom: 48px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
   }
 
   &__left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 566px;
+
+    @include big-desktop {
+      max-width: 630px;
+    }
   }
 
   &__right {
+    display: inline-block;
     max-width: 574px;
-    flex-grow: 1;
+
+    @include big-desktop {
+      max-width: 630px;
+    }
   }
 
   &-carousel {
     border-radius: 30px;
+    flex-shrink: 1;
+
 
     &__slide {
       display: flex;
@@ -37,9 +66,19 @@
 .deal-card {
   margin-bottom: 114px;
 
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
   &__inner {
     display: flex;
     gap: 60px;
+
+    @include big-desktop {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
 
   &__title {
@@ -49,6 +88,16 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 53px;
+
+    @include big-desktop {
+      padding-top: 0;
+    }
+
+    @include tablet {
+      margin-bottom: 16px;
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   &__specifications {
@@ -56,6 +105,10 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 150px));
     gap: 20px;
+
+    @include big-desktop {
+      justify-content: space-between;
+    }
   }
 
   &__spec-wrapper {
@@ -68,18 +121,32 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__spec-title {
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &__bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
 
     &-title {
       margin-bottom: 10px;
@@ -100,7 +167,7 @@
     }
 
     &-item:not(:last-child) {
-      margin-bottom: 10px
+      margin-bottom: 10px;
     }
 
     &-pros &-item {
@@ -111,7 +178,7 @@
         position: absolute;
         left: -20px;
         top: 50%;
-          transform: translateY(-50%);
+        transform: translateY(-50%);
         font-size: 18px;
         font-weight: 700;
         line-height: 24px;
@@ -170,32 +237,66 @@
       font-weight: 700;
       color: #fb2a2a;
     }
+
+    // @include tablet {
+    //   font-size: 16px;
+    //   line-height: 20px;
+    // }
   }
 
   &__text {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+
+    // @include tablet {
+    //   font-size: 14px;
+    //   line-height: 18px;
+    // }
+  }
+
+  // @include tablet {
+  //   padding: 10px 15px;
+  // }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 
 
 .f-carousel__viewport {
   border-radius: 30px;
-  height: 476px;
 }
 
 .f-carousel__thumbs {
   --f-thumb-width: 134px;
   --f-thumb-height: 105px;
+
+  @include tablet {
+    --f-thumb-width: 114px;
+    --f-thumb-height: 75px;
+  }
+
+  @include mobile {
+    --f-thumb-width: 94px;
+    --f-thumb-height: 55px;
+  }
 }
 
 .f-thumbs__slide__button {
   border-radius: 20px;
+
 }
 
 .f-thumbs.is-horizontal .f-thumbs__track {
   padding: 18px 0 0 0;
+
+  @include minidesk {
+    padding: 10px 0 0 0;
+  }
 }
 
 .f-carousel__thumbs.is-classic {

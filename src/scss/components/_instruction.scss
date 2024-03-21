@@ -6,6 +6,14 @@
   background-position: center;
   background-size: cover;
 
+  @include tablet {
+    padding-top: 60px;
+  }
+
+  @include minidesk {
+    background-image: url('../img/bg/hero-bg.webp');
+  }
+
   &__title {
     margin-bottom: var(--main-gap);
     text-align: center;
@@ -16,12 +24,20 @@
     margin-bottom: 46px;
     text-align: center;
     max-width: 1100px;
+
+    @include tablet {}
   }
 
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 75px;
+
+    @include minidesk {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 20px;
+    }
   }
 
   &__column {
@@ -29,10 +45,19 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
+
+    @include minidesk {
+      max-width: 400px;
+      gap: 20px;
+    }
   }
 
   &-block {
     padding-left: 30px;
+
+    @include mobile {
+      padding-left: 25px;
+    }
 
     &__title {
       position: relative;
@@ -42,17 +67,29 @@
       font-weight: 700;
       line-height: 24px;
 
-      &::before{
+      @include tablet {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &::before {
         content: '';
         position: absolute;
         left: -30px;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 20px;
         height: 20px;
         background-image: url('../img/icons/instruction-check.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include mobile {
+          left: -25px;
+          width: 16px;
+          height: 16px;
+        }
       }
     }
 
@@ -61,6 +98,11 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 24px;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 20px;
+      }
     }
 
   }
