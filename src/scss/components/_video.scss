@@ -1,6 +1,10 @@
 .video {
   padding-bottom: 120px;
-  
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 34px;
     text-align: center;
@@ -8,12 +12,19 @@
 
   &__content {
     position: relative;
+    padding: 0 20px;
+
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
   }
 
   &__slide iframe {
     border-radius: 20px;
-    max-width: 300px;
-    max-height: 504px;
+    max-width: 308px;
+    max-height: 550px;
   }
 
   &__arrow-prev,
@@ -55,10 +66,10 @@
   }
 
   &-prev {
-    left: -70px;
+    left: -10px;
   }
 
   &-next {
-    right: -70px;
+    right: -10px;
   }
 }
