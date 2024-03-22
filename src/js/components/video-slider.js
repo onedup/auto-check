@@ -13,6 +13,7 @@ const swiper = new Swiper(".video-swiper", {
     // when window width is >= 320px 700
     320: {
       slidesPerView: 1,
+      spaceBetween: 10,
       allowTouchMove: true,
     },
     // when window width is >= 480px 1024

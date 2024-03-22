@@ -9,7 +9,7 @@
       на рынке, проверим все документы и проведем полную диагностику
     </span>
     <div class="hero__btn-wrapper">
-      <button class="btn-reset btn hero__btn">Оставить заявку на подбор авто</button>
+      <button class="btn-reset btn hero__btn _modal-open" data-modal-open="modal-call">Оставить заявку на подбор авто</button>
       <span class="hero__text">Услуга подбора авто в 80% случаях окупается за счет торга с продавцом</span>
     </div>
     <ul class="list-reset hero__list">
@@ -29,5 +29,21 @@
         <p class="hero-item__text">Полная прозрачность и открытость процесса. Вы получаете полный отчет о найденных вариантах и их проверке, а также сопровождение на каждом этапе сделки.</p>
       </li>
     </ul>
+  </div>
+  <div class="modal _modal" data-modal="modal-call">
+    <div class="modal__box">
+      <button class="btn-reset modal__close" aria-label="close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+<path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+</svg>
+      </button>
+      <span class="modal__title">Оставить заявку на подбор авто</span>
+      <form class="call-form">
+          <input type="hidden" name="title" value="Проверьте объявление бесплатно">
+          <input class="call-form__input" type="text" id="name" name="name" placeholder="Ваше имя">
+          <input class="call-form__input" type="text" id="phone-num" name="phone-num" placeholder="Номер телефона">
+          <button class="btn-reset btn btn--small">Отправить заявку</button>
+        </form>
+    </div>
   </div>
 </section>
